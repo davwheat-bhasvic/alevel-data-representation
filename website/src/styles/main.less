@@ -1,0 +1,50 @@
+:root {
+  --primary-red: #f04c63;
+  --primary-blue: #51c5dd;
+  --blue-dark: #0a4f70;
+  --neutral-grey: #c6c4c4;
+  --link-color: #00528a;
+}
+
+@import './baseline.less';
+
+@import './typography.less';
+
+@import './table.less';
+
+@import './tooltips.less';
+
+ul,
+ol {
+  list-style-type: square;
+  list-style-position: outside;
+  margin-left: 20px;
+  counter-reset: none;
+
+  &:not(.list) {
+    list-style: none;
+  }
+}
+
+sup {
+  .text-whisper();
+  vertical-align: super;
+}
+
+abbr {
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+  cursor: help;
+}
+
+.smallDeviceWarning {
+  display: none;
+
+  @media (max-height: 600px) {
+    display: block;
+  }
+
+  @media (max-width: 500px) {
+    display: block;
+  }
+}
