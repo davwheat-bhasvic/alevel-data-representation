@@ -23,9 +23,7 @@ const useStyles = makeStyles({
   },
 })
 
-interface Props {}
-
-const Section: React.FC<Props> = ({ children, ...props }) => {
+const Section: React.FC = ({ children, ...props }) => {
   const classes = useStyles()
 
   return (
